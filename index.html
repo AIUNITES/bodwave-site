@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP15KRLV6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VP15KRLV6P');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BodWave Training Method | Progressive Muscle Training with Movement Notation</title>
+  <meta name="description" content="BodWave is a four-stage progressive training method that uses Movement Notation to track, prescribe, and advance muscle training intensity — from mobility to high-performance output.">
+  <meta name="keywords" content="BodWave, movement notation, muscle training method, progressive exercise, BW1 BW2 BW3 BW4, physical therapy training, rehab progression, MNN training">
+  <meta name="author" content="AIUNITES / BodSpas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bodwave.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bodwave.com/">
+  <meta property="og:title" content="BodWave Training Method | Four-Stage Progressive Muscle Training">
+  <meta property="og:description" content="Train smarter with the BodWave method — a four-stage progression system for muscle training, physical therapy, and performance. Built on the MNN movement notation spec.">
+  <meta property="og:image" content="https://bodwave.com/images/og-image.png">
+
+  <meta name="theme-color" content="#f59e0b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+
+  <style>
+    :root {
+      --black: #0a0a0b;
+      --white: #fafafa;
+      --accent: #f59e0b;
+      --accent-2: #ef4444;
+      --accent-glow: rgba(245,158,11,0.35);
+      --gray: #888;
+      --dark-gray: #1a1a1c;
+      --card-bg: #141416;
+      --gradient-1: linear-gradient(135deg, #f59e0b 0%, #ef4444 60%, #dc2626 100%);
+      --gradient-soft: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); min-height: 100vh; overflow-x: hidden; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    /* ── WEBRING ── */
+    .aiunites-bar{position:fixed;top:0;left:0;right:0;z-index:10000;background:linear-gradient(90deg,#0a0a0f,#1a1a2e);border-bottom:1px solid rgba(99,102,241,.3);padding:8px 0;font-size:12px}
+    .aiunites-bar-content{max-width:1400px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px;overflow-x:auto;scrollbar-width:none}
+    .aiunites-bar-content::-webkit-scrollbar{display:none}
+    .aiunites-bar a{color:rgba(255,255,255,.7);text-decoration:none;white-space:nowrap;transition:color .2s}
+    .aiunites-bar a:hover{color:#fff}
+    .aiunites-bar-brand{color:#6366f1!important;font-weight:600}
+    .aiunites-bar-divider{color:rgba(255,255,255,.2)}
+    .wb-arrow{display:none;position:fixed;top:0;width:36px;height:33px;align-items:center;justify-content:center;cursor:pointer;z-index:10001;border:none;padding:0;font-size:16px;line-height:1;color:rgba(255,255,255,.8);transition:color .2s,opacity .2s}
+    .wb-arrow:hover{color:#fff}
+    .wb-left{left:0;background:linear-gradient(90deg,#0d0d1a 55%,transparent)}
+    .wb-right{right:0;background:linear-gradient(270deg,#0d0d1a 55%,transparent)}
+    @media (hover:hover) and (pointer:fine){.wb-arrow{display:flex}}
+    body{padding-top:36px}
+
+    /* ── NAV ── */
+    .nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 3rem; position: sticky; top: 36px; z-index: 900;
+      background: rgba(10,10,11,0.95); backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -0.5px; }
+    .logo span { background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .btn-primary {
+      background: var(--gradient-1); color: var(--black); padding: 0.7rem 1.5rem;
+      border-radius: 100px; font-weight: 700; font-size: 0.9rem; border: none; cursor: pointer;
+      font-family: var(--font); display: inline-flex; align-items: center; gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px var(--accent-glow); }
+    .btn-secondary {
+      background: var(--dark-gray); color: var(--white); padding: 0.7rem 1.5rem;
+      border-radius: 100px; font-weight: 600; font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.15); cursor: pointer; font-family: var(--font);
+      display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.2s ease;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 5rem 3rem 4.5rem; position: relative; overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 75% 40%, rgba(245,158,11,0.18) 0%, transparent 55%),
+                  radial-gradient(ellipse at 25% 80%, rgba(239,68,68,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 680px; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 1rem; background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.35); border-radius: 50px;
+      font-size: 0.8rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;
+    }
+    .hero h1 { font-size: clamp(2.5rem, 5.5vw, 3.75rem); font-weight: 900; line-height: 1.05; margin-bottom: 1.25rem; letter-spacing: -1px; }
+    .gradient-text { background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { font-size: 1.2rem; color: var(--gray); line-height: 1.7; margin-bottom: 2.5rem; max-width: 560px; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+
+    /* BW Scale Visual */
+    .bw-scale {
+      display: flex; gap: 0; border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08); max-width: 580px;
+    }
+    .bw-step {
+      flex: 1; padding: 1.25rem 1rem; text-align: center; position: relative;
+      border-right: 1px solid rgba(255,255,255,0.08); cursor: default;
+      transition: all 0.2s;
+    }
+    .bw-step:last-child { border-right: none; }
+    .bw-step:hover { background: rgba(255,255,255,0.04); }
+    .bw-step-label { font-size: 1.25rem; font-weight: 900; margin-bottom: 0.2rem; }
+    .bw-step-name { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 0.3rem; }
+    .bw-step-desc { font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.3; }
+    .bw1 { background: rgba(74,222,128,0.07); } .bw1 .bw-step-label { color: #4ade80; }
+    .bw2 { background: rgba(251,191,36,0.07); } .bw2 .bw-step-label { color: #fbbf24; }
+    .bw3 { background: rgba(249,115,22,0.07); } .bw3 .bw-step-label { color: #f97316; }
+    .bw4 { background: rgba(239,68,68,0.07); }  .bw4 .bw-step-label { color: #ef4444; }
+
+    /* ── WHAT IS BODWAVE ── */
+    .what { padding: 5rem 0; background: var(--dark-gray); }
+    .what-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .what-text h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
+    .what-text p { font-size: 1rem; color: var(--gray); line-height: 1.75; margin-bottom: 1rem; }
+    .what-text p strong { color: var(--white); }
+    .what-text a { color: var(--accent); font-weight: 600; }
+    .what-text a:hover { text-decoration: underline; }
+    .section-badge {
+      display: inline-block; padding: 0.4rem 0.9rem; background: rgba(245,158,11,0.1);
+      border-radius: 50px; font-size: 0.75rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;
+    }
+    .what-visual { display: flex; flex-direction: column; gap: 1rem; }
+    .pillar-card {
+      background: var(--card-bg); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 1.25rem 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem; transition: all 0.2s;
+    }
+    .pillar-card:hover { border-color: rgba(245,158,11,0.3); }
+    .pillar-icon { font-size: 1.75rem; flex-shrink: 0; margin-top: 2px; }
+    .pillar-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .pillar-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.5; }
+
+    /* ── STAGES ── */
+    .stages { padding: 5rem 0; }
+    .stages-header { text-align: center; margin-bottom: 3.5rem; }
+    .stages-header h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .stages-header p { color: var(--gray); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+    .stages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .stage-card {
+      border-radius: 18px; padding: 2rem 1.5rem; position: relative; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07); transition: all 0.3s ease;
+    }
+    .stage-card:hover { transform: translateY(-5px); }
+    .stage-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+    .stage-card.bw1 { background: rgba(74,222,128,0.05); }
+    .stage-card.bw1::before { background: #4ade80; }
+    .stage-card.bw1:hover { border-color: rgba(74,222,128,0.3); box-shadow: 0 12px 30px rgba(74,222,128,0.1); }
+    .stage-card.bw2 { background: rgba(251,191,36,0.05); }
+    .stage-card.bw2::before { background: #fbbf24; }
+    .stage-card.bw2:hover { border-color: rgba(251,191,36,0.3); box-shadow: 0 12px 30px rgba(251,191,36,0.1); }
+    .stage-card.bw3 { background: rgba(249,115,22,0.05); }
+    .stage-card.bw3::before { background: #f97316; }
+    .stage-card.bw3:hover { border-color: rgba(249,115,22,0.3); box-shadow: 0 12px 30px rgba(249,115,22,0.1); }
+    .stage-card.bw4 { background: rgba(239,68,68,0.05); }
+    .stage-card.bw4::before { background: #ef4444; }
+    .stage-card.bw4:hover { border-color: rgba(239,68,68,0.3); box-shadow: 0 12px 30px rgba(239,68,68,0.1); }
+    .stage-num { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -1px; }
+    .bw1 .stage-num { color: #4ade80; } .bw2 .stage-num { color: #fbbf24; }
+    .bw3 .stage-num { color: #f97316; } .bw4 .stage-num { color: #ef4444; }
+    .stage-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .stage-intensity {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
+      margin-bottom: 1rem; color: var(--gray);
+    }
+    .stage-desc { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 1.25rem; }
+    .stage-applies { font-size: 0.8rem; color: var(--gray); }
+    .stage-applies strong { color: rgba(255,255,255,0.6); }
+
+    /* ── HOW TO USE ── */
+    .howto { padding: 5rem 0; background: var(--dark-gray); }
+    .howto-inner { max-width: 820px; margin: 0 auto; }
+    .howto-inner h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .howto-inner > p { color: var(--gray); margin-bottom: 3rem; font-size: 1rem; }
+    .howto-steps { display: flex; flex-direction: column; gap: 1.25rem; }
+    .howto-step {
+      background: var(--card-bg); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 1.5rem 1.75rem;
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+    .howto-step:hover { border-color: rgba(245,158,11,0.25); }
+    .howto-num {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: var(--gradient-1); display: flex; align-items: center;
+      justify-content: center; font-weight: 900; font-size: 1rem; color: var(--black);
+    }
+    .howto-step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .howto-step p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+    .howto-step p strong { color: var(--white); }
+
+    /* ── USE CASES ── */
+    .usecases { padding: 5rem 0; }
+    .usecases-header { text-align: center; margin-bottom: 3rem; }
+    .usecases-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .usecases-header p { color: var(--gray); }
+    .usecases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .usecase-card {
+      background: var(--card-bg); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 2rem 1.75rem; text-align: center; transition: all 0.25s;
+    }
+    .usecase-card:hover { border-color: rgba(245,158,11,0.3); transform: translateY(-3px); }
+    .usecase-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .usecase-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .usecase-card p { font-size: 0.875rem; color: var(--gray); line-height: 1.6; }
+
+    /* ── NOTATION LINK ── */
+    .notation-cta {
+      padding: 4.5rem 0; background: var(--dark-gray);
+    }
+    .notation-cta-inner {
+      max-width: 700px; margin: 0 auto; text-align: center;
+      background: var(--card-bg); border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 24px; padding: 3rem 2.5rem;
+    }
+    .notation-cta-inner h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .notation-cta-inner p { color: var(--gray); margin-bottom: 2rem; line-height: 1.7; }
+    .notation-cta-inner .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── NEWSLETTER ── */
+    .newsletter { padding: 5rem 0; }
+    .newsletter-inner {
+      background: var(--gradient-1); border-radius: 24px;
+      padding: 4rem; text-align: center;
+    }
+    .newsletter-inner h2 { font-size: 2rem; font-weight: 800; color: var(--black); margin-bottom: 0.75rem; }
+    .newsletter-inner p { color: rgba(0,0,0,0.7); margin-bottom: 2rem; font-size: 1.05rem; }
+    .nl-form { display: flex; gap: 1rem; max-width: 460px; margin: 0 auto; }
+    .nl-form input {
+      flex: 1; padding: 1rem 1.5rem; border-radius: 100px; border: none;
+      font-size: 1rem; font-family: var(--font); outline: none;
+    }
+    .nl-form button {
+      background: var(--black); color: var(--white); padding: 1rem 1.75rem;
+      border-radius: 100px; border: none; font-weight: 700; cursor: pointer;
+      font-family: var(--font); font-size: 0.95rem; transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nl-form button:hover { background: #111; }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 3rem 0 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+    .footer-brand p { color: var(--gray); margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; }
+    .footer-col h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; }
+    .footer-col a { display: block; color: var(--gray); font-size: 0.9rem; padding: 0.3rem 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.82rem; color: var(--gray); flex-wrap: wrap; gap: 0.75rem;
+    }
+    .footer-bottom a { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1000px) {
+      .stages-grid { grid-template-columns: 1fr 1fr; }
+      .what-inner { grid-template-columns: 1fr; }
+      .usecases-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 4rem 1.5rem 3rem; }
+      .stages-grid, .usecases-grid { grid-template-columns: 1fr; }
+      .bw-scale { flex-wrap: wrap; }
+      .bw-step { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .nl-form { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Webring -->
+  <button class="wb-arrow wb-left" id="wb-left" aria-label="Scroll webring left">&#8249;</button>
+  <div class="aiunites-bar"><div class="aiunites-bar-content" id="wb-content">
+    <a href="https://aiunites.github.io/aiunites-site/" class="aiunites-bar-brand">◆ AIUNITES</a>
+    <span class="aiunites-bar-divider">|</span>
+    <a href="https://aiunites.github.io/aizines-app/">AIZines</a>
+    <a href="https://aiunites.github.io/aibyjob-demo/">AIByJob</a>
+    <a href="https://aiunites.github.io/redomy-demo/">Redomy</a>
+    <a href="https://aiunites.github.io/videobate-site/">VideoBate</a>
+    <a href="https://aiunites.github.io/voicestry-site/">VoiceStry</a>
+    <a href="https://aiunites.github.io/furnishthings-site/">FurnishThings</a>
+    <a href="https://aiunites.github.io/bizstry-site/">BizStry</a>
+    <a href="https://aiunites.github.io/aiyhwh-site/">AI YHWH</a>
+    <a href="https://aiunites.github.io/cloudsion-site/">Cloudsion</a>
+    <a href="https://aiunites.github.io/gameatica-site/">Gameatica</a>
+    <a href="https://aiunites.github.io/uptownit-site/">UptownIT</a>
+    <a href="https://aiunites.github.io/inthisworld-site/">InThisWorld</a>
+    <a href="https://aiunites.github.io/erpise-site/">ERPise</a>
+    <a href="https://aiunites.github.io/erpize-site/">ERPize</a>
+    <a href="https://aiunites.github.io/aitsql-site/">AITSQL</a>
+    <a href="https://aiunites.github.io/cosmostheopera-site/">🌌 COSMOS</a>
+  </div></div>
+  <script>(function(){if(location.protocol==='file:'||location.hostname==='localhost'||location.hostname==='127.0.0.1'){document.querySelectorAll('.aiunites-bar a').forEach(a=>{a.href=a.href.replace('https://aiunites.github.io/','../')+'index.html';});}var c=document.getElementById('wb-content'),l=document.getElementById('wb-left'),r=document.getElementById('wb-right');if(!c||!l||!r)return;function upd(){var atL=c.scrollLeft<8,atR=c.scrollLeft>=c.scrollWidth-c.clientWidth-8;l.style.opacity=atL?'0':'1';l.style.pointerEvents=atL?'none':'auto';r.style.opacity=atR?'0':'1';r.style.pointerEvents=atR?'none':'auto';}l.onclick=function(){c.scrollBy({left:-220,behavior:'smooth'});};r.onclick=function(){c.scrollBy({left:220,behavior:'smooth'});};c.addEventListener('scroll',upd,{passive:true});upd();})()</script>
+  <button class="wb-arrow wb-right" id="wb-right" aria-label="Scroll webring right">&#8250;</button>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="#" class="logo">Bod<span>Wave</span></a>
+    <div class="nav-links">
+      <a href="#stages">The 4 Stages</a>
+      <a href="#how-to-use">How to Use It</a>
+      <a href="#use-cases">Who It's For</a>
+      <a href="https://aiunites.github.io/bodspas-site/bodwave.html" target="_blank">Full Notation Reference</a>
+    </div>
+    <a href="#newsletter" class="btn-primary">Get Updates</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">💪 Training Method</div>
+      <h1>Train in <span class="gradient-text">Four Waves.</span><br>Progress in Every One.</h1>
+      <p class="hero-sub">BodWave is a four-stage progressive training framework that uses movement notation to precisely track, prescribe, and advance muscle training intensity — from rehabilitation to high-performance output.</p>
+      <div class="hero-cta">
+        <a href="#stages" class="btn-primary">Explore the 4 Stages</a>
+        <a href="#how-to-use" class="btn-secondary">How to Apply It</a>
+      </div>
+      <div class="bw-scale">
+        <div class="bw-step bw1">
+          <div class="bw-step-label">BW1</div>
+          <div class="bw-step-name">Mobility</div>
+          <div class="bw-step-desc">Active range &amp; tissue prep</div>
+        </div>
+        <div class="bw-step bw2">
+          <div class="bw-step-label">BW2</div>
+          <div class="bw-step-name">Strength</div>
+          <div class="bw-step-desc">Load-bearing &amp; resistance</div>
+        </div>
+        <div class="bw-step bw3">
+          <div class="bw-step-label">BW3</div>
+          <div class="bw-step-name">Power</div>
+          <div class="bw-step-desc">Speed, force, elasticity</div>
+        </div>
+        <div class="bw-step bw4">
+          <div class="bw-step-label">BW4</div>
+          <div class="bw-step-name">Performance</div>
+          <div class="bw-step-desc">Peak output &amp; sport-specific</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Is BodWave -->
+  <section class="what">
+    <div class="container">
+      <div class="what-inner">
+        <div class="what-text">
+          <div class="section-badge">About BodWave</div>
+          <h2>Movement, Measured.<br>Progress, Structured.</h2>
+          <p>BodWave is the <strong>training application layer</strong> built on top of the Movement Notation Notation (MNN) specification. While MNN defines how to notate any muscle movement with precision, BodWave defines <strong>how to use those notations to build progressive training programs</strong>.</p>
+          <p>The BW1–BW4 scale gives trainers, therapists, and athletes a shared vocabulary for progression — one that travels across sessions, practitioners, and platforms without losing accuracy.</p>
+          <p>For the complete symbol reference and notation spec, see the <a href="https://aiunites.github.io/bodspas-site/bodwave.html" target="_blank">full BodWave Notation Reference →</a></p>
+        </div>
+        <div class="what-visual">
+          <div class="pillar-card">
+            <div class="pillar-icon">📐</div>
+            <div>
+              <h3>Notation-Backed</h3>
+              <p>Every BodWave prescription maps to MNN symbols — muscle group, direction, antagonist pairing, ROM, and nerve tag. Nothing is vague.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📈</div>
+            <div>
+              <h3>Genuinely Progressive</h3>
+              <p>BW stages aren't just intensity levels. They represent qualitatively different training goals — and readiness criteria before advancing.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔄</div>
+            <div>
+              <h3>Cross-Context</h3>
+              <p>The same BW notation works in a PT clinic, a gym, a rehab log, an avatar platform, or a robotics training dataset.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🩺</div>
+            <div>
+              <h3>Clinical Status Integration</h3>
+              <p>BodWave includes clinical status codes (ACT, RHB, STB, LMT) so injury status travels with the notation — not in a separate file.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 4 Stages -->
+  <section class="stages" id="stages">
+    <div class="container">
+      <div class="stages-header">
+        <div class="section-badge">The BodWave Scale</div>
+        <h2>Four Stages, One System</h2>
+        <p>Each stage represents a distinct training objective with specific readiness criteria before progression.</p>
+      </div>
+      <div class="stages-grid">
+        <div class="stage-card bw1">
+          <div class="stage-num">BW1</div>
+          <div class="stage-name">Mobility Wave</div>
+          <div class="stage-intensity">Low intensity · Foundation</div>
+          <div class="stage-desc">Active range of motion, tissue quality, and neuromuscular activation. No load — just movement quality and pain-free range. The starting point for any new muscle target or post-injury return.</div>
+          <div class="stage-applies"><strong>Applies to:</strong> Post-injury rehab, warm-up phases, new training stimulus introduction, mobility deficits</div>
+        </div>
+        <div class="stage-card bw2">
+          <div class="stage-num">BW2</div>
+          <div class="stage-name">Strength Wave</div>
+          <div class="stage-intensity">Moderate intensity · Load-bearing</div>
+          <div class="stage-desc">Resistance training against external load. Eccentric control, concentric drive, and isometric holds. The primary phase for hypertrophy, injury prevention, and base strength development.</div>
+          <div class="stage-applies"><strong>Applies to:</strong> General fitness, post-PT strength rebuilding, hypertrophy programs, functional strength</div>
+        </div>
+        <div class="stage-card bw3">
+          <div class="stage-num">BW3</div>
+          <div class="stage-name">Power Wave</div>
+          <div class="stage-intensity">High intensity · Speed + Force</div>
+          <div class="stage-desc">Ballistic and plyometric loading. Rate of force development, elasticity, and multi-joint coordination under speed. Requires demonstrated BW2 competency before entry.</div>
+          <div class="stage-applies"><strong>Applies to:</strong> Athletes, ACL/tendon return-to-sport protocols, explosive movement training</div>
+        </div>
+        <div class="stage-card bw4">
+          <div class="stage-num">BW4</div>
+          <div class="stage-name">Performance Wave</div>
+          <div class="stage-intensity">Peak intensity · Sport-specific</div>
+          <div class="stage-desc">Full-system output under competitive or performance conditions. Sport-specific demands, fatigue tolerance, and peak neuromuscular recruitment. Reserved for athletes and high-performance contexts.</div>
+          <div class="stage-applies"><strong>Applies to:</strong> Competitive athletes, high-performance training, advanced rehabilitation finales</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Use It -->
+  <section class="howto" id="how-to-use">
+    <div class="container">
+      <div class="howto-inner">
+        <div class="section-badge">How to Apply BodWave</div>
+        <h2>A Session in Four Steps</h2>
+        <p>BodWave doesn't require special equipment or proprietary software. It's a notation protocol — you can use it in any training system, log, or app.</p>
+        <div class="howto-steps">
+          <div class="howto-step">
+            <div class="howto-num">1</div>
+            <div>
+              <h3>Identify the Muscle Target</h3>
+              <p>Use the <strong>MNN muscle symbol</strong> for the specific muscle or group you're training. This anchors the notation to anatomy — not just to exercise names that vary by gym or coach.</p>
+            </div>
+          </div>
+          <div class="howto-step">
+            <div class="howto-num">2</div>
+            <div>
+              <h3>Assign a BW Stage</h3>
+              <p>Assess the client or athlete's readiness for this muscle target. Assign <strong>BW1, BW2, BW3, or BW4</strong> based on range of motion quality, current load tolerance, and clinical status. When in doubt, start one stage lower.</p>
+            </div>
+          </div>
+          <div class="howto-step">
+            <div class="howto-num">3</div>
+            <div>
+              <h3>Prescribe with MNN Modifiers</h3>
+              <p>Add direction (con/ecc/iso), ROM arc, load, antagonist pairing, and nerve tag. A complete BodWave notation gives the next practitioner <strong>everything they need to continue the program without a handoff meeting</strong>.</p>
+            </div>
+          </div>
+          <div class="howto-step">
+            <div class="howto-num">4</div>
+            <div>
+              <h3>Define Advancement Criteria</h3>
+              <p>Write the criteria for moving from this BW stage to the next — specific performance thresholds, pain scores, ROM targets. <strong>Progression is earned, not assumed.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="usecases" id="use-cases">
+    <div class="container">
+      <div class="usecases-header">
+        <div class="section-badge">Who Uses BodWave</div>
+        <h2>One Method, Many Contexts</h2>
+        <p>BodWave scales from clinical rehab to elite performance to digital simulation.</p>
+      </div>
+      <div class="usecases-grid">
+        <div class="usecase-card">
+          <div class="usecase-icon">🩺</div>
+          <h3>Physical Therapists</h3>
+          <p>Prescribe progressions with notation that transfers cleanly between sessions, clinicians, and discharge notes. No more "do the exercises from last week."</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏋️</div>
+          <h3>Strength & Conditioning Coaches</h3>
+          <p>Write programs that travel — from your session notes to your athlete's app to the team's database. BW stage tags make periodization explicit.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🧘</div>
+          <h3>Personal Trainers</h3>
+          <p>Differentiate your programming with notation that shows clients exactly where they are and exactly where they're going. BodWave makes progress visible.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🤖</div>
+          <h3>Robotics & Avatar Platforms</h3>
+          <p>BodWave's notation is machine-readable. Use BW stage tags to drive simulated body movement through correct progressive loading sequences in virtual environments.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🎮</div>
+          <h3>Fitness App Developers</h3>
+          <p>Build exercise progression logic on a notation spec rather than proprietary databases. BodWave gives you a structured foundation that maps to real anatomy.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏫</div>
+          <h3>Kinesiology Educators</h3>
+          <p>Teach progressive loading principles with a notation system students can apply immediately in practice. BodWave is simple enough to learn in one session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notation Reference CTA -->
+  <section class="notation-cta">
+    <div class="container">
+      <div class="notation-cta-inner">
+        <h2>📋 Looking for the Full Notation Reference?</h2>
+        <p>BodWave.com is the training method entry point. For the complete MNN symbol library — all 48+ muscle symbols, clinical status codes, nerve tags, directional axes, and antagonist pairing notation — see the full reference on BodSpas.</p>
+        <div class="btn-row">
+          <a href="https://aiunites.github.io/bodspas-site/bodwave.html" target="_blank" class="btn-primary">Full BodWave Notation Reference →</a>
+          <a href="https://aiunites.github.io/bodspas-site/" target="_blank" class="btn-secondary">Visit BodSpas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <h2>Stay Updated on BodWave</h2>
+        <p>Get notified as the BodWave method, tools, and notation spec develop.</p>
+        <form class="nl-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/formResponse" method="POST" target="_blank">
+          <input type="hidden" name="entry.2053726945" value="BodWave.com Newsletter">
+          <input type="email" name="entry.904300305" placeholder="your@email.com" required>
+          <button type="submit">Get Updates</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="font-size:1.5rem;font-weight:900;">Bod<span style="background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Wave</span></a>
+          <p>The BodWave progressive training method. Built on the Movement Notation Notation (MNN) specification from AIUNITES / BodSpas.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Method</h4>
+          <a href="#stages">The 4 Stages</a>
+          <a href="#how-to-use">How to Apply</a>
+          <a href="#use-cases">Who It's For</a>
+        </div>
+        <div class="footer-col">
+          <h4>Notation</h4>
+          <a href="https://aiunites.github.io/bodspas-site/bodwave.html" target="_blank">Full Notation Reference</a>
+          <a href="https://aiunites.github.io/bodspas-site/" target="_blank">BodSpas Platform</a>
+          <a href="https://aiunites.github.io/aiunites-site/movement.html" target="_blank">MNN Overview</a>
+          <a href="https://aiunites.github.io/aiunites-site/" target="_blank">AIUNITES</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BodWave. A product of <a href="https://aiunites.github.io/aiunites-site">AIUNITES</a></span>
+        <div style="display:flex;gap:1.25rem;">
+          <a href="https://aiunites.github.io/aiunites-site/legal.html#privacy">Privacy</a>
+          <a href="https://aiunites.github.io/aiunites-site/legal.html#terms">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
